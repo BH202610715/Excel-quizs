@@ -1,0 +1,11 @@
+{
+  "name": "excelquiz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "start": "NODE_ENV=production node server.mjs"
+  }
+}

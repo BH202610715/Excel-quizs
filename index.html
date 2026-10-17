@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102522" />
+    <meta name="description" content="Excel 함수와 명령을 300문항으로 연습하는 랜덤 퀴즈" />
+    <title>엑셀 함수·명령 300제</title>
+    <link rel="icon" href="./brandmark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="엑셀 퀴즈 홈">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><rect x="2" y="2" width="32" height="32" rx="9" fill="currentColor"/><path d="M10 10h16M10 17h16M10 24h16M17 10v16M24 10v16" fill="none" stroke="#102522" stroke-width="1.5" opacity=".28"/><path d="m11 14 5 9m0-9-5 9" fill="none" stroke="#f5f5e9" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <span class="brand-copy"><strong>셀 한 칸씩</strong><small>EXCEL PRACTICE / 300</small></span>
+        </a>
+        <div class="topbar-right"><span class="source-tag"><span class="source-dot"></span> DOCS 기반 문제 은행</span><button id="topHomeBtn" class="top-home" type="button">처음으로 <span aria-hidden="true">↗</span></button></div>
+      </header>
+
+      <main id="mainContent">
+        <section id="homeView" class="view home-view" aria-labelledby="heroTitle">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> SPREADSHEET FIELDNOTES <span class="eyebrow-index">NO. 01 — 300</span></p>
+              <h1 id="heroTitle">엑셀을 읽고,<br /><em>직접 다루는</em> 연습.</h1>
+              <p class="hero-description">함수 이름을 외우는 데서 멈추지 않도록.<br class="desktop-break" />상황을 읽고, 수식을 고르고, 결과를 확인하는 300개의 문제.</p>
+              <div class="hero-actions">
+                <button id="startBtn" class="button button-primary" type="button" disabled><span>문제 설정하고 시작</span><span class="button-arrow" aria-hidden="true">→</span></button>
+                <span id="loadStatus" class="load-status" role="status" aria-live="polite">문제 은행 불러오는 중…</span>
+              </div>
+              <div class="hero-rule"></div>
+              <div class="hero-footnote"><span class="mono-label">STUDY NOTE</span><span>한 번 시작할 때마다 문제와 선택지를 새로 섞습니다.</span></div>
+            </div>
+            <div class="hero-art" aria-label="무작위 퀴즈의 문항 번호와 난이도를 나타내는 그래픽">
+              <div class="art-top"><span>ROUND / RANDOMIZED</span><span class="art-live"><i></i> READY</span></div>
+              <div class="art-sheet">
+                <div class="sheet-head"><span>QUESTION SET</span><span>01—300</span></div>
+                <div class="sheet-row"><span class="sheet-num">qn<span>011</span></span><span class="sheet-code">=IF(A2&gt;=60, …)</span><b class="level-chip level-high">상</b></div>
+                <div class="sheet-row"><span class="sheet-num">qn<span>084</span></span><span class="sheet-code">=TRIM(A1)</span><b class="level-chip level-mid">중</b></div>
+                <div class="sheet-row"><span class="sheet-num">qn<span>219</span></span><span class="sheet-code">Ctrl + ;</span><b class="level-chip level-low">하</b></div>
+                <div class="sheet-row sheet-row-muted"><span class="sheet-num">qn<span>— — —</span></span><span class="sheet-code">다음 문제는?</span><b class="shuffle-mark" aria-hidden="true">↻</b></div>
+              </div>
+              <div class="art-bottom"><span>매번 달라지는 순서</span><span class="art-spark" aria-hidden="true">✳</span><span>당신의 페이스로</span></div>
+              <div class="art-caption">※ 그래픽의 문제 번호는 예시입니다.</div>
+            </div>
+          </div>
+
+          <section class="stats-strip" aria-label="문제 은행 구성">
+            <div class="stat-intro"><span class="mono-label">THE QUESTION BANK</span><p>문서 한 권을<br />연습장 한 권으로.</p></div>
+            <div class="stat-item"><strong>300</strong><span>전체 문항</span></div>
+            <div class="stat-item"><strong>210<span class="stat-unit"> / 90</span></strong><span>객관식 / 주관식</span></div>
+            <div class="stat-item"><strong>03</strong><span>하 · 중 · 상 난이도</span></div>
+            <div class="stat-topics"><span class="mono-label">COVERAGE</span><p>날짜·시간 · 논리 · 계산 · 통계·순위 · 텍스트<br />셀 사칙연산 · 키보드 명령</p></div>
+          </section>
+
+          <section class="setup-section" aria-labelledby="setupTitle">
+            <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> BUILD YOUR ROUND</p><h2 id="setupTitle">오늘의 연습을 고르세요.</h2></div><span class="section-note">선택은 자유롭게, 출제 순서는 무작위로.</span></div>
+            <div class="setup-panel">
+              <div class="select-control"><label for="difficultySelect"><span class="control-index">01</span> 난이도</label><select id="difficultySelect"><option value="all">전체 난이도</option><option value="하">하 · 기초 다지기</option><option value="중">중 · 적용 연습</option><option value="상">상 · 응용과 구별</option></select></div>
+              <div class="select-control"><label for="typeSelect"><span class="control-index">02</span> 문제 유형</label><select id="typeSelect"><option value="all">객관식 + 주관식</option><option value="객관식">객관식만</option><option value="주관식">주관식만</option></select></div>
+              <div class="select-control"><label for="topicSelect"><span class="control-index">03</span> 학습 영역</label><select id="topicSelect"><option value="all">모든 영역</option></select></div>
+              <div class="select-control"><label for="countSelect"><span class="control-index">04</span> 문항 수</label><select id="countSelect"><option value="10">10문항</option><option value="20" selected>20문항</option><option value="30">30문항</option><option value="50">50문항</option><option value="100">100문항</option><option value="all">전체 풀기</option></select></div>
+              <div class="setup-summary"><div><span id="filteredCount" class="summary-number">—</span><span class="summary-label">출제 가능 문항</span></div><button id="beginQuizBtn" class="button button-dark" type="button" disabled><span>이 조건으로 시작</span><span class="button-arrow" aria-hidden="true">→</span></button></div>
+            </div>
+            <p class="setup-hint"><span aria-hidden="true">↻</span> 같은 조건으로 다시 시작해도 문항 순서와 객관식 선택지 순서가 다시 섞여요.</p>
+          </section>
+          <footer class="site-footer"><span>셀 한 칸씩 <span class="footer-divider">/</span> DOCS 기반 Excel 연습</span><span>기능 설명과 사용법은 제공된 학습 자료를 기준으로 구성했습니다.</span></footer>
+        </section>
+
+        <section id="quizView" class="view quiz-view" hidden aria-labelledby="questionTitle">
+          <div class="quiz-heading"><button id="backToSetupBtn" class="back-link" type="button"><span aria-hidden="true">←</span> 설정으로</button><div class="quiz-heading-center"><span class="mono-label">YOUR PRACTICE ROUND</span><strong id="roundLabel">20문항 랜덤 출제</strong></div><button id="finishTopBtn" class="finish-link" type="button">결과 보기 <span aria-hidden="true">↗</span></button></div>
+          <div class="quiz-progress"><div class="progress-label"><span id="progressQuestion">01 / 20</span><span id="progressAnswered">답변 0개</span></div><div class="progress-track"><span id="progressFill"></span></div></div>
+          <div id="questionStage" class="question-stage" aria-live="polite"></div>
+          <div class="quiz-controls"><button id="prevBtn" class="button button-quiet" type="button"><span aria-hidden="true">←</span> 이전</button><div class="quiz-control-center"><button id="checkBtn" class="button button-outline" type="button">답 확인</button><button id="nextBtn" class="button button-primary" type="button">다음 문제 <span class="button-arrow" aria-hidden="true">→</span></button></div><span class="keyboard-hint">방향키로 이동할 수 있어요</span></div>
+        </section>
+
+        <section id="resultsView" class="view results-view" hidden aria-labelledby="resultsTitle">
+          <div class="results-topline"><button id="resultsHomeBtn" class="back-link" type="button"><span aria-hidden="true">←</span> 설정으로</button><span class="mono-label">ROUND COMPLETE</span></div>
+          <div class="results-hero"><p class="eyebrow"><span class="eyebrow-line"></span> NICE WORK</p><h1 id="resultsTitle">한 회차를 마쳤어요.</h1><p id="resultsSubtitle" class="results-subtitle"></p></div>
+          <div id="scoreCards" class="score-cards"></div>
+          <div id="reviewSection" class="review-section"></div>
+          <div class="results-actions"><button id="retryMissedBtn" class="button button-outline" type="button">복습 문항 다시 풀기 <span aria-hidden="true">↻</span></button><button id="newRoundBtn" class="button button-primary" type="button">새 회차 설정 <span class="button-arrow" aria-hidden="true">→</span></button></div>
+          <footer class="site-footer"><span>셀 한 칸씩 <span class="footer-divider">/</span> DOCS 기반 Excel 연습</span><span>주관식 서술형은 예시 답안을 확인하고 스스로 점검할 수 있습니다.</span></footer>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
